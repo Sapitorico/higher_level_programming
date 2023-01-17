@@ -1,0 +1,2 @@
+#!/bin/user/python3
+"python3" -c $PYCODE
