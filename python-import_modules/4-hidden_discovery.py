@@ -5,5 +5,7 @@ def discovr():
     for i in name:
         if not i.startswith('__'):
             print("{:s}".format(i))
+
+
 if __name__ == "__main__":
     discovr()
