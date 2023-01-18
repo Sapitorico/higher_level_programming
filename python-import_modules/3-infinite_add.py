@@ -8,6 +8,8 @@ def add_arg(argv):
         for i in range(1, len(argv)):
             add += int(argv[i])
         print("{:d}".format(add))
+
+
 if __name__ == "__main__":
     import sys
     add_arg(sys.argv)
