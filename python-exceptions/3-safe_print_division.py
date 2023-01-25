@@ -8,4 +8,6 @@ def safe_print_division(a, b):
     except:
         print("Inside result: {}".format(None))
         return None
+    finally:
+        hola = 0
     return float(result)
