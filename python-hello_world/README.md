@@ -1,4 +1,4 @@
-<div><h1 align="center">Python - Hello, World</h1></div>
+<div><h1 align="center">Python - Hello, World</h1>
 
 <h2>Python Programming</h2>
 
@@ -18,6 +18,7 @@ Allows you to write compact and readable
 * It is not necessary to declare variables or arguments
 
 Python is extendable: if you know program in C it is easy to add a new function or module incorporated into the interpret, You can also link Python's interpreter to an application written in C and be used it as extensions
+</div>
 
 <details>
 <summary><h3>Invoking the Interpreter</h3></summary>
