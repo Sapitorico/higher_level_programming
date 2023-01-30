@@ -2,8 +2,8 @@
 
 
 class Square:
-    ''' create a class square '''
+    """ create a class square """
     def square():
-        ''' define a square using el pass position marker '''
+        """ define a square using el pass position marker """
         pass
 
