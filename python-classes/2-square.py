@@ -3,9 +3,11 @@
 
 
 class Square:
+    '''dwqdq '''
     def __init__(self, size=0):
-		''' write a size validation '''
+        '''dwdw'''
         self.__size = size
+        '''write a size validation'''
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
