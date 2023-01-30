@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
 
+""" create a class square """
 class Square:
-    """ create a class square """
-    def square():
-        """ define a square using el pass position marker """
-        pass
-
+    """ asdqweds """
