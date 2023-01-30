@@ -1,6 +1,5 @@
-#!/usr/bin/python3
-''' define a class Squares '''
-
+#!/usr/bib/python3
+''' obtain area od square '''
 
 class Square:
     ''' define the initiation'''
@@ -12,3 +11,5 @@ class Square:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
+    def area(self):
+        return self.__size**2
