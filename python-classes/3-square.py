@@ -1,4 +1,4 @@
-#!/usr/bib/python3
+#!/usr/bin/python3
 ''' obtain area od square '''
 
 
