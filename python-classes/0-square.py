@@ -3,4 +3,4 @@
 
 """ create a class square """
 class Square:
-    """ asdqweds """
+	""" empty class field """
