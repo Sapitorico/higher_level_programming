@@ -34,7 +34,8 @@ class Square:
             print()
         else:
             for line in range(self.__size):
-                print()
                 for j in range(self.__size):
                     print('#', end="")
+                if line+1 < self.__size:
+                    print()
             print()
