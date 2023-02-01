@@ -2,7 +2,6 @@ test to module add def add_integer():
 
 This module provides the add_integer () function that is responsible for adding two integers
 ======================
-Using ``add``
 Prototype: def add_integer(a, b=98):
 -------------------
 

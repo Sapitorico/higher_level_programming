@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-""" Doc """
+matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-def add_integer(a, b=0):
-    """ Doc """
-    if a is None or (type(a) is not int and type(a) is not float):
-        raise TypeError("a must be an integer")
-    if type(b) is not int and type(b) is not float:
-        raise TypeError("b must be an integer")
-    return int(a) + int(b)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+print(matrix_divided(matrix, 3))
+print(matrix)
