@@ -31,3 +31,7 @@ Traceback (most recent call last):
   File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/4-print_square.py", line 11, in print_square
     raise ValueError('size must be >= 0')
 ValueError: size must be >= 0
+>>> print_square()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: print_square() missing 1 required positional argument: 'size'
