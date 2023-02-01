@@ -5,7 +5,7 @@
 def say_my_name(first_name, last_name=""):
     """ first_name and last_name must be strings otherwise """
     if not isinstance(first_name, str):
-        raise TypeError("First and last names must be strings")
+        raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
-        raise TypeError("Last and first names must be strings")
+        raise TypeError("last_name must be a string")
     print(f"My name is {first_name} {last_name}")
