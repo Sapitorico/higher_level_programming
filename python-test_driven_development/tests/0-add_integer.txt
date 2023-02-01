@@ -1,0 +1,44 @@
+test to module add def add_integer():
+
+This module provides the add_integer () function that is responsible for adding two integers
+======================
+Using ``add``
+Prototype: def add_integer(a, b=98):
+-------------------
+
+function that adds 2 integers.
+
+    a and b must be integers or floats
+    a and b must be first casted to integers if they are float
+    Returns an integer: the addition of a and b
+
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(5, 7)
+12
+>>> add_integer(5.7, 7)
+12
+>>> add_integer(5.7, 7.6)
+12
+>>> add_integer(6, 7,)
+13
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer("3", 7)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 6, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+>>> add_integer(6, "7")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 8, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer(6, 7, 8)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
