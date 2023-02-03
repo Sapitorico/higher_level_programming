@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-''' obtain area od square '''
+""" define a square class """
 
 
 class Square:
-    ''' define the initiation'''
+    """ create a private instant attribute """
     def __init__(self, size=0):
-        '''create a private attribute '''
         self.__size = size
-        '''write a size validation'''
-        if not isinstance(size, int):
+        """ size must be an integer size must be >= 0 """
+        if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-    ''' public method thats return area of square'''
+
+    """ define a Public instance method """
     def area(self):
-        return self.__size**2
+        return self.__size ** 2
