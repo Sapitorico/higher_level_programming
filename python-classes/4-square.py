@@ -8,16 +8,10 @@ class Square:
         self.__size = size
 
     """ define a Public instance method """
-    @property
     def size(self):
-        """ size must be an integer size must be >= 0 """
-        if type(self.__size) is not int:
-            raise TypeError("size must be an integer")
-        elif self.__size < 0:
-            raise ValueError("size must be >= 0")
+        return self.__size
 
     """ define a Public instance method """
-    @property.setter
     def size(self, value):
         if type(self.__size) is not int:
             raise ValueError("size must be an inter")
@@ -26,12 +20,5 @@ class Square:
         self.__size = value
 
     """ define a Public instance method """
-    @property
     def area(self):
         return self.__size ** 2
-
-    def my_print(self):
-        if self.__size == 0:
-            print()
-        else:
-            print("#" * self.__size)
