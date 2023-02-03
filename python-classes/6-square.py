@@ -1,41 +1,51 @@
 #!/usr/bin/python3
-''' create a class square '''
+""" define a square class """
 
 
 class Square:
-    ''' define the initiation'''
-    def __init__(self, size=0):
+    """ create a private instant attribute """
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
+        self.__position = position
 
-    '''create a private attribute '''
+    """ define a Public instance method """
     @property
     def size(self):
         return self.__size
 
+    """ define a Public instance method """
     @size.setter
     def size(self, value):
-
-        '''write a size validation'''
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+        if type(value) is not int:
+            raise ValueError("size must be an inter")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
+    """ define a Public instance method """
+    @property
+    def position(self):
+        return self.__position
+
+    """ define a Public instance method """
+    @position.setter
+    def position(self, value):
+        if type(value) is not tuple and value != 2:
+            raise ValueError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
+    """ define a Public instance method """
+    @property
     def area(self):
+        return self.__size ** 2
 
-        ''' public method thats return area of square'''
-        return self.__size**2
-
-    ''' print a square of # the size of self.__size'''
     def my_print(self):
+        """Prints in stdout the square with the character #."""
         if self.__size == 0:
             print()
         else:
-            for line in range(self.__size):
-                for j in range(self.__size):
-                    print('#', end="")
-                if line+1 < self.__size:
-                    print()
-            print()
+            for i in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
