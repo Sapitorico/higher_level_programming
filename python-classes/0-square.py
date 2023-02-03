@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" create a class square """
+""" define a square class """
 
 
-class Square:
+class square:
     """ empty class field """
