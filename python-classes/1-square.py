@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-''' Create a Class Square '''
+""" define a square class """
 
 
 class Square:
-    ''' define a Attribute initialization method '''
+    """ create a private instant attribute """
     def __init__(self, size):
         self.__size = size
