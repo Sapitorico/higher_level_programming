@@ -4,6 +4,8 @@
 
 def text_indentation(text):
     """ There should be no space at the beginning or at the end of each printed line """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
     indent = False
     for char in text:
         if char in ".?:":
