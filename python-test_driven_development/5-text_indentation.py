@@ -3,16 +3,13 @@
 
 
 def text_indentation(text):
-    """ text must be a string """
     if type(text) != str:
         raise TypeError("text must be a string")
-    """ no space at the beginning  or at the end of each printed line """
-    words = text.split()
+
     new_text = ""
-    for word in words:
-        new_text += word
-        if word[-1] in ".:?":
+    for char in text:
+        new_text += char
+        if char in ".?:":
             new_text += "\n\n"
-        else:
-            new_text += " "
+
     print(new_text.strip(), end="")
