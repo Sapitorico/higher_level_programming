@@ -26,3 +26,8 @@ Traceback (most recent call last):
     raise TypeError("text must be a string")
 TypeError: text must be a string
 >>> text_indentation("")
+>>> text = ""
+>>> text_indentation(text)
+>>> text = "hola    "
+>>> text_indentation(text)
+hola    
