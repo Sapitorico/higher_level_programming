@@ -28,4 +28,10 @@ TypeError: text must be a string
 >>> text_indentation("")
 >>> text = ""
 >>> text_indentation(text)
->>> text = "..   ?  .. "
+>>> text = "la puta         madreeee"
+>>> text_indentation(text)
+la puta         madreeee
+>>> text = "la puta    \n     madreeee"
+>>> text_indentation(text)
+la puta    
+     madreeee
