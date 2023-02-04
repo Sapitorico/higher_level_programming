@@ -3,13 +3,14 @@
 
 
 def text_indentation(text):
-    if type(text) != str:
-        raise TypeError("text must be a string")
-
-    new_text = ""
+    """ There should be no space at the beginning or at the end of each printed line """
+    indent = False
     for char in text:
-        new_text += char
         if char in ".?:":
-            new_text += "\n\n"
-
-    print(new_text.strip(), end="")
+            print(char, end="\n\n")
+            indent = True
+        elif indent and char == " ":
+            continue
+        else:
+            indent = False
+            print(char, end="")
