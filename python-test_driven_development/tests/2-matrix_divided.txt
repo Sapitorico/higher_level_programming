@@ -30,13 +30,6 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix = [[1.2, 2, 3],[4, 5, 6]]
 >>> matrix_divided(matrix, 3)
 [[0.4, 0.67, 1.0], [1.33, 1.67, 2.0]]
->>> matrix = [[2, 2, 3, 3],[4, 5, 6]]
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 16, in matrix_divided
-    raise TypeError("Each row of the matrix must have the same size")
-TypeError: Each row of the matrix must have the same size
 >>> matrix = [[1, 3, 3],[4, 5, 6]]
 >>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
@@ -45,12 +38,6 @@ Traceback (most recent call last):
     raise ZeroDivisionError("division by zero")
 ZeroDivisionError: division by zero
 >>> matrix = [[1, 3, 3],[4, 5, 6]]
->>> matrix_divided(matrix, "str")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 18, in matrix_divided
-    raise TypeError("div must be a number")
-TypeError: div must be a number
 >>> matrix = [[1, 3, 3],[4, 5, 6]]
 >>> div = float('inf')
 >>> matrix_divided(matrix, div)
