@@ -25,4 +25,4 @@ Traceback (most recent call last):
   File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-test_driven_development/5-text_indentation.py", line 7, in text_indentation
     raise TypeError("text must be a string")
 TypeError: text must be a string
->>> text_indentation(" ")
+>>> text_indentation("")
