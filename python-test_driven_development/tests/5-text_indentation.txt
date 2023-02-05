@@ -35,3 +35,9 @@ la puta         madreeee
 >>> text_indentation(text)
 la puta    
      madreeee
+>>> text_indentation("tomato     .   ,,,,/\?00")
+tomato     .
+<BLANKLINE>
+,,,,/\?
+<BLANKLINE>
+00
