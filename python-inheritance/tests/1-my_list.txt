@@ -40,3 +40,10 @@ TypeError: 'int' object is not iterable
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(-1)
+>>> print(my_list.print_sorted())
+[-1, 1, 2]
+None
