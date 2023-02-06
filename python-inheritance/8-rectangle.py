@@ -14,7 +14,8 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
-    """ class Rectangle that inherits from BaseGeometry """
+
+""" class Rectangle that inherits from BaseGeometry """
 
 
 class Rectangle(BaseGeometry):
