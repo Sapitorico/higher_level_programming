@@ -38,3 +38,10 @@ TypeError: my_int must be an integer
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
 [ValueError] distance must be greater than 0
+>>> bg =  BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 8, in area
+    raise Exception("area() is not implemented")
+Exception: area() is not implemented
