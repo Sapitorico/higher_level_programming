@@ -47,3 +47,7 @@ TypeError: 'int' object is not iterable
 >>> print(my_list.print_sorted())
 [-1, 1, 2]
 None
+>>> my_list = MyList()
+>>> print(my_list.print_sorted())
+[]
+None
