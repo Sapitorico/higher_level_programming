@@ -59,7 +59,6 @@ Traceback (most recent call last):
   File "/mnt/c/Users/5060/Desktop/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 13, in integer_validator
     raise TypeError(f"{name} must be an integer")
 TypeError: age must be an integer
-
 >>> bg.integer_validator("age", True)
 >>> bg.integer_validator("age", {3,4})
 Traceback (most recent call last):
