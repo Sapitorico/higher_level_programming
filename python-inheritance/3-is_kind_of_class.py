@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" define a new function """
 
 
 def is_kind_of_class(obj, a_class):
