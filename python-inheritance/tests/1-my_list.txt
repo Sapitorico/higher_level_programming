@@ -1,0 +1,30 @@
+Doctest from class MyListTest
+================================================================
+Write a class MyList that inherits from list:
+
+Public instance method: def print_sorted(self): that prints the list, but sorted (ascending sort)
+You can assume that all the elements of the list will be of type int
+You are not allowed to import any module
+
+>>> MyList = __import__('1-my_list').MyList
+>>> MyList()
+[]
+>>> MyList(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list expected at most 1 argument, got 2
+>>> MyList(14)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(5)
+>>> my_list.append(7)
+>>> my_list.append(9)
+>>> print(my_list)
+[1, 5, 7, 9]
+>>> my_list.print_sorted()
+[1, 5, 7, 9]
+>>> print(my_list)
+[1, 5, 7, 9]
