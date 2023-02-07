@@ -7,6 +7,5 @@ import sys
 
 filename = "add_item.json"
 """ saved as a JSON representation in a file named add_item.json """
-my_obj = sys.argv[1:]
-save_to_json_file(my_obj, filename)
+save_to_json_file(sys.argv[1:], filename)
 load_from_json_file(filename)
