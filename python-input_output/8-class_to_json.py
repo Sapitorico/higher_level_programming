@@ -1,4 +1,4 @@
-#!.usr.bin/python3
+#!/usr/bin/python3
 """ returns the dictionary description with simple data structure """
 import json
 
