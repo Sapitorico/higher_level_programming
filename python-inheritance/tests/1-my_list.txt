@@ -76,6 +76,6 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 [1, 5, 7, 67]
 None
 
-    >>> my_list = MyList([1, 2, 3])
-    >>> print(my_list)
-    [1, 2, 3]
+    >>> my_list = MyList()
+    >>> print(my_list.print_sorted)
+    <bound method MyList.print_sorted of []>
