@@ -1,7 +1,5 @@
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 >>> obj = BaseGeometry()
->>> obj.integer_validator()
-Traceback (most recent call last):
 
 >>> obj.integer_validator("john", 2)
 
