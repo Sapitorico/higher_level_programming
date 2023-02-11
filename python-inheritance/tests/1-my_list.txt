@@ -76,7 +76,6 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 [1, 5, 7, 67]
 None
 
-    >>> MyList = __import__('1-my_list').MyList
-    >>> my_list = MyList()
-    >>> type(my_list)
-    <class '1-my_list.MyList'>
+    >>> my_list = MyList([1, 2, 3])
+    >>> print(my_list)
+    [1, 2, 3]
