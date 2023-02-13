@@ -12,11 +12,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    """ public methods: """
-    def area(self):
-        """ return a area """
-        return self.width * self.height
-
     """ Private instance attributes,\
         each with its own public getter and setter: """
     """ getter """
@@ -74,3 +69,14 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    """ public methods: """
+    def area(self):
+        """ return a area """
+        return self.width * self.height
+
+    """ public method  """
+    def display(self):
+        """ t prints in stdout the Rectangle """
+        for i in range(self.height):
+            print("#" * self.width)
