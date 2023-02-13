@@ -12,6 +12,10 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    """ public methods: """
+    def area(self):
+        return self.width * self.height
+
     """ Private instance attributes,\
         each with its own public getter and setter: """
     @property
