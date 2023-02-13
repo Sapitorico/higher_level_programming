@@ -14,7 +14,7 @@ class Rectangle(Base):
 
     """ Private instance attributes,\
         each with its own public getter and setter: """
-    property
+    @property
     def width(self):
         return self.__width
 
