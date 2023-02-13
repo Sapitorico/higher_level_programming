@@ -11,6 +11,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+        self.id = id
 
     """ Private instance attributes,\
         each with its own public getter and setter: """
@@ -86,3 +87,4 @@ class Rectangle(Base):
         """  method so that it returns """
         return (f"[Rectangle] ({self.id}) {self.x}/{self.y} \
 - {self.width}/{self.height}")
+
