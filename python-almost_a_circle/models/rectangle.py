@@ -7,9 +7,25 @@ class Rectangle(Base):
     """ Class constructor: """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
+        if type(width) is not int:
+            raise TypeError("width must be integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
         self.__width = width
+        if type(height) is not int:
+            raise TypeError("height must be integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
         self.__height = height
+        if type(x) is not int:
+            raise TypeError("x must be integer")
+        if x < 0:
+            raise ValueError("x must be > 0")
         self.__x = x
+        if type(y) is not int:
+            raise TypeError("y must be integer")
+        if y < 0:
+            raise ValueError("y must be > 0")
         self.__y = y
 
     """ Private instance attributes,\
