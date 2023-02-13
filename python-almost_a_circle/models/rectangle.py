@@ -79,12 +79,13 @@ class Rectangle(Base):
     """ public method  """
     def display(self):
         """ t prints in stdout the Rectangle """
-        for i in range(self.height):
-            print("#" * self.width)
+        for i in range(self.y):
+            print()
+        for j in range(self.height):
+            print(' ' * self.x + '#' * self.width)
 
     """ method  """
     def __str__(self):
         """  method so that it returns """
         return (f"[Rectangle] ({self.id}) {self.x}/{self.y} \
 - {self.width}/{self.height}")
-
