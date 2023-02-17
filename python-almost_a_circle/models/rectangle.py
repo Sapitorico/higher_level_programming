@@ -105,9 +105,7 @@ class Rectangle(Base):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    def perimeter(self):
-        return 2 * (self.width + self.height)
-
     def to_dictionary(self):
+        """ doc """
         return {'x': self.x, 'y': self.y, 'id': self.id,
                 'height': self.height, 'width': self.width}
