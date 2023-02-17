@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """ Write the class Square that inherits from Rectangle """
-
-
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """ Class constructor """
@@ -12,7 +11,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """ The overloading """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}"\
+            .format(self.id, self.x, self.y, self.width)
 
     """ getter """
     @property
