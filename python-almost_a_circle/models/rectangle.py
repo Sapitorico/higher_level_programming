@@ -104,3 +104,10 @@ class Rectangle(Base):
             self.y = args[4]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+    def to_dictionary(self):
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
