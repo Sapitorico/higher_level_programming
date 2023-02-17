@@ -8,9 +8,6 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """ validation must inherit from Rectangle """
         super().__init__(size, size, x, y, id)
-        self.x = x
-        self.y = y
-        self.id = id
 
     def __str__(self):
         """ The overloading """
@@ -44,3 +41,7 @@ class Square(Rectangle):
                 self.y = args[3]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ doc """
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
