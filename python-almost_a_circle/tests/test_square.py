@@ -158,6 +158,12 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r1, None)
         self.assertEqual(Square.load_from_file(), [])
         os.remove("./Square.json")
+        Square.save_to_file([])
+        self.assertEqual(Square.load_from_file(), [])
+        os.remove("./Square.json")
+        r1 = Square.save_to_file([Square(1)])
+        self.assertIsInstance(Square.load_from_file()[0], Square)
+        os.remove("./Square.json")
 
 
 if __name__ == '__main__':
