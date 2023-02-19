@@ -95,6 +95,12 @@ class TestRectangle(unittest.TestCase):
         r2.display()
         sys.stdout = sys.__stdout__
         self.assertEqual(output.getvalue(), "##\n##\n##\n")
+        r3 = Rectangle(2, 3, 2, 2)
+        output = io.StringIO()
+        sys.stdout = output
+        r3.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(output.getvalue(), "\n\n  ##\n  ##\n  ##\n")
 
     """ Test of to_dictionary() in Rectangle exists """
     def test_to_dictionary(self):
@@ -120,6 +126,12 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 1/3 - 4/2")
         r1.update(width=1, x=2, y=3, height=4)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 2/3 - 1/4")
+
+    def test_create(self):
+        """Test create."""
+        dic = {'y': 62, 'x': 24, 'id': 12, 'width': 2, 'height': 2}
+        r1 = Rectangle.create(**dic)
+        self.assertEqual(r1.__str__(), "[Rectangle] (12) 24/62 - 2/2")
 
 
 if __name__ == '__main__':
