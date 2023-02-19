@@ -79,7 +79,7 @@ class TestRectangle(unittest.TestCase):
         """ test display """
         r1 = Rectangle(4, 6)
         r1.display()
-        r2 = Rectangle(2, 2)
+        r2 = Rectangle(2, 3)
         r2.display()
         r3 = Rectangle(2, 3, 2, 2)
         r3.display()
@@ -88,6 +88,13 @@ class TestRectangle(unittest.TestCase):
         """ test str """
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(r1.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+
+    """ Test of to_dictionary() in Rectangle exists """
+    def test_to_dictionary(self):
+        """Test to dictionary."""
+        dic = {'y': 62, 'x': 24, 'id': 12, 'width': 2, 'height': 2}
+        r1 = Rectangle(2, 2, 24, 62, 12)
+        self.assertEqual(r1.to_dictionary(), dic)
 
     def test_update(self):
         """ test update """
