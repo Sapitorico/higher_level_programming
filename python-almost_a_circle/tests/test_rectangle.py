@@ -89,6 +89,12 @@ class TestRectangle(unittest.TestCase):
         r1.display()
         sys.stdout = sys.__stdout__
         self.assertEqual(output.getvalue(), "####\n####\n####\n####\n####\n####\n")
+        r2 = Rectangle(2, 3)
+        output = io.StringIO()
+        sys.stdout = output
+        r2.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(output.getvalue(), "##\n##\n##\n")
 
     """ Test of to_dictionary() in Rectangle exists """
     def test_to_dictionary(self):
