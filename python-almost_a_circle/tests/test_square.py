@@ -103,8 +103,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual
         """ Test of to_dictionary() in Square exists """
         self.assertTrue(hasattr(s2, "to_dictionary"))
+        dic = {'x': 2, 'y': 1, 'id': 9, 'size': 10}
+        self.assertEqual(s2.to_dictionary(), dic)
 
-    """ Test of update() in Square exists """
     def test_update(self):
         """ test update """
         s1 = Square(10, 10, 10, 10)
@@ -130,7 +131,6 @@ class TestSquare(unittest.TestCase):
         s1.update(x=1, size=2, y=3, id=89)
         self.assertEqual(s1.__str__(), "[Square] (89) 1/3 - 2")
 
-    """ Test of Square(1, 2, "3") exists """
     def test_square_x_y(self):
         """ test square x y """
         with self.assertRaises(TypeError):
@@ -138,6 +138,26 @@ class TestSquare(unittest.TestCase):
         """ Test of Square(1, "2", 3) exists """
         with self.assertRaises(TypeError):
             s8 = Square(1, "2", 3)
+
+    def test_square_args(self):
+        """ test square args """
+        with self.assertRaises(TypeError):
+            s9 = Square(1, 2, 3, 4, 5)
+
+    def test_create(self):
+        """ test create """
+        r1 = Square(10, 2, 1, 9)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Square.create(**r1_dictionary)
+        self.assertFalse(r1 is r2)
+        self.assertEqual(r1.__str__(), r2.__str__())
+
+    def test_save_to_file(self):
+        """ test save to file """
+        r1 = Square.save_to_file(None)
+        self.assertEqual(r1, None)
+        self.assertEqual(Square.load_from_file(), [])
+        os.remove("./Square.json")
 
 
 if __name__ == '__main__':
