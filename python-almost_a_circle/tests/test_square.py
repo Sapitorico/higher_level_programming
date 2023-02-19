@@ -94,12 +94,15 @@ class TestSquare(unittest.TestCase):
         s1 = Square(4, 2, 1, 12)
         self.assertEqual(s1.__str__(), "[Square] (12) 2/1 - 4")
 
-    """ Test of to_dictionary() in Square exists """
     def test_to_dictionary(self):
         """ test to dictionary """
         s1 = Square(10, 2, 1, 9)
         self.assertEqual
         (s1.to_dictionary(), {'x': 2, 'y': 1, 'id': 9, 'size': 10})
+        s2 = Square(10, 2, 1, 9)
+        self.assertEqual
+        """ Test of to_dictionary() in Square exists """
+        self.assertTrue(hasattr(s2, "to_dictionary"))
 
     """ Test of update() in Square exists """
     def test_update(self):
@@ -126,6 +129,15 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.__str__(), "[Square] (89) 3/1 - 2")
         s1.update(x=1, size=2, y=3, id=89)
         self.assertEqual(s1.__str__(), "[Square] (89) 1/3 - 2")
+
+    """ Test of Square(1, 2, "3") exists """
+    def test_square_x_y(self):
+        """ test square x y """
+        with self.assertRaises(TypeError):
+            s7 = Square(1, 2, "3")
+        """ Test of Square(1, "2", 3) exists """
+        with self.assertRaises(TypeError):
+            s8 = Square(1, "2", 3)
 
 
 if __name__ == '__main__':
