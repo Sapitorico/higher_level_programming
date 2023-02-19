@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """ write a test from class rectangle"""
 import unittest
-import io, sys
+import io
+import sys
+import os
 from models import Rectangle
 
 
@@ -88,7 +90,8 @@ class TestRectangle(unittest.TestCase):
         sys.stdout = output
         r1.display()
         sys.stdout = sys.__stdout__
-        self.assertEqual(output.getvalue(), "####\n####\n####\n####\n####\n####\n")
+        self.assertEqual
+        (output.getvalue(), "####\n####\n####\n####\n####\n####\n")
         r2 = Rectangle(2, 3)
         output = io.StringIO()
         sys.stdout = output
@@ -132,6 +135,42 @@ class TestRectangle(unittest.TestCase):
         dic = {'y': 62, 'x': 24, 'id': 12, 'width': 2, 'height': 2}
         r1 = Rectangle.create(**dic)
         self.assertEqual(r1.__str__(), "[Rectangle] (12) 24/62 - 2/2")
+
+    def test_save_to_file(self):
+        """Test save to file None."""
+        r1 = Rectangle.save_to_file(None)
+        self.assertEqual(Rectangle.load_from_file(), [])
+        os.remove("./Rectangle.json")
+        r1 = Rectangle.save_to_file([])
+        self.assertEqual(Rectangle.load_from_file(), [])
+        os.remove("./Rectangle.json")
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        list_rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(r1.__str__(), list_rectangles_output[0].__str__())
+        self.assertEqual(r2.__str__(), list_rectangles_output[1].__str__())
+        os.remove("./Rectangle.json")
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        list_rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(r1.__str__(), list_rectangles_output[0].__str__())
+        self.assertEqual(r2.__str__(), list_rectangles_output[1].__str__())
+        os.remove("./Rectangle.json")
+
+    def test_load_from_file(self):
+        """Test load from file."""
+        r1 = Rectangle.save_to_file(None)
+        self.assertEqual(Rectangle.load_from_file(), [])
+        os.remove("./Rectangle.json")
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        list_rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(r1.__str__(), list_rectangles_output[0].__str__())
+        self.assertEqual(r2.__str__(), list_rectangles_output[1].__str__())
+        os.remove("./Rectangle.json")
 
 
 if __name__ == '__main__':
