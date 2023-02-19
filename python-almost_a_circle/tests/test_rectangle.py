@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ write a test from class rectangle"""
 import unittest
+import io, sys
 from models import Rectangle
 
 
@@ -75,19 +76,19 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r3.area(), 56)
 
-    def test_display(self):
-        """ test display """
-        r1 = Rectangle(4, 6)
-        r1.display()
-        r2 = Rectangle(2, 3)
-        r2.display()
-        r3 = Rectangle(2, 3, 2, 2)
-        r3.display()
-
     def test_str(self):
         """ test str """
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(r1.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_display(self):
+        """ test display """
+        r1 = Rectangle(4, 6)
+        output = io.StringIO()
+        sys.stdout = output
+        r1.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(output.getvalue(), "####\n####\n####\n####\n####\n####\n")
 
     """ Test of to_dictionary() in Rectangle exists """
     def test_to_dictionary(self):
