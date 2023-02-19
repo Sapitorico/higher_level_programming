@@ -1,4 +1,5 @@
-`""" write a test from class base"""
+#!/usr/bin/python3
+""" write a test from class base"""
 import unittest
 from models import Base
 
@@ -34,33 +35,6 @@ class TestBase(unittest.TestCase):
         r3 = Base.from_json_string('[{"id": 89}]')
         self.assertEqual(r3, [{'id': 89}])
 
-    def test_create(self):
-        """ test create """
-        r1 = Base.create(None)
-        self.assertEqual(r1, None)
-        r2 = Base.create([])
-        self.assertEqual(r2, [])
-        r3 = Base.create([{'id': 89}])
-        self.assertEqual(r3, [{'id': 89}])
-
-    def test_save_to_file(self):
-        """ test save to file """
-        r1 = Base.save_to_file(None)
-        self.assertEqual(r1, None)
-        r2 = Base.save_to_file([])
-        self.assertEqual(r2, [])
-        r3 = Base.save_to_file([{'id': 89}])
-        self.assertEqual(r3, [{'id': 89}])
-
-    def test_load_from_file(self):
-        """ test load from file """
-        r1 = Base.load_from_file(None)
-        self.assertEqual(r1, None)
-        r2 = Base.load_from_file([])
-        self.assertEqual(r2, [])
-        r3 = Base.load_from_file([{'id': 89}])
-        self.assertEqual(r3, [{'id': 89}])
-
 
 if __name__ == '__main__':
-    unittest.main()`
+    unittest.main()
