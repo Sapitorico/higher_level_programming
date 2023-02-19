@@ -59,5 +59,13 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r4 = Rectangle(10, 2, 0, -8)
 
+    """ Test of Rectangle(0, 2) exists """
+    def test_rectangle_0_2(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(0, 2)
+        with self.assertRaises(ValueError):
+            r2 = Rectangle(2, 0)
+
+
 if __name__ == '__main__':
     unittest.main()
