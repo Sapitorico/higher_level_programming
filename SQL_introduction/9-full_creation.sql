@@ -1,7 +1,7 @@
 -- create a secon table in the database and add a multimples rows
-CREATE TABLE IF NOT EXISTS second_table (
+CREATE TABLE IF NOT EXISTS hbtn_0c_0.second_table (
     id INT,
-    name VARCH(256),
+    name VARCHAR(256),
     score INT
 );
 INSERT INTO second_table (id, name, score) VALUES
