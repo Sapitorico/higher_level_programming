@@ -1,2 +1,2 @@
 -- list the number of recors whit same score in the table
-SELECT score, COUNT(*) FROM second_table GROUP BY score;
+SELECT score, COUNT(*) 'number' FROM second_table GROUP BY score;
