@@ -1,5 +1,7 @@
 -- list all cities of california
-SELECT cities.name
+SELECT id, name
 FROM cities
-JOIN states ON cities.state_id = states.id AND states.name = 'California'
-ORDER BY cities.id ASC;
+WHERE states_id IN(
+    SELECT id, FROM states WHERE name = 'California'
+)
+ORDER BY id ;
