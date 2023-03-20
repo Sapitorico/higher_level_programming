@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """ script that lists all states from the database """
+=======
+<<<<<<< HEAD
+
+=======
+# -*- coding: utf-8 -*-
+>>>>>>> c9a7cbbfc048e818b8ab31ff99c8c51880077f16
+'''commented out'''
+>>>>>>> origin/main
 import MySQLdb
 import sys
 
