@@ -6,7 +6,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
-
 if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
@@ -20,8 +19,8 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).filter(State.name.like('%a%'))
-    print("States with a name containing the letter 'a':")
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        session.delete(state)
+    session.commit()
 
     session.close()
