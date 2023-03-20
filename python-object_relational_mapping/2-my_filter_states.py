@@ -20,10 +20,8 @@ if __name__ == '__main__':
         )
     """Create a cursor object"""
     cursor = db.cursor()
-    sql_query =\
-        "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC"
-    params = ('%' + state_name + '%',)
-    cursor.execute(sql_query, params)
+    cursor.execute("SELECT * FROM states WHERE name\
+        LIKE BINARY '{}' ORDER BY id ASC".format(state_name))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
